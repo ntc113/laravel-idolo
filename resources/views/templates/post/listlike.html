@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">{{likes.length}} likes</h4>
+</div>
+<div class="modal-body">
+    <div class="user">
+        <div class="user-inner">
+            <div class="list-line">
+                <!--item user-->
+                <div class="item-user" ng-repeat="like in likes">
+                    <a href="#" ui-sref="user.activity({userId: like.id })">
+                        <span class="item-avatar"><img ng-src="{{like.avatar}}"></span>
+                            <span class="item-info">
+                                <span class="item-info-name">{{like.name}}</span>
+                            </span>
+                    </a>
+                    <button type="button" class="btn btn-default btn-icon btn-sm"><i class="icon ion-person-add"></i>Follow</button>
+                </div>
+                <!--end item user-->
+
+            </div>
+        </div>
+        <!--<div class="load-more">-->
+            <!--<a href="#" class="btn btn-default btn-block btn-lg">-->
+                <!--Xem thêm-->
+            <!--</a>-->
+        <!--</div>-->
+    </div>
+</div>

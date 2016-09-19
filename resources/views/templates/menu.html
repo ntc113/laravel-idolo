@@ -1,0 +1,35 @@
+<head/><ul class="nav navbar-nav">
+    <li ui-sref-active="active"><a href="" ui-sref="home">New</a></li>
+    <li ui-sref-active="active"><a href="/hot" ui-sref="hot">Hot</a></li>
+    <!-- <li ui-sref-active="active" ng-repeat='menu in menus'>
+        <a href="" ui-sref="category.detail({slug: menu.slug})">{{ ::menu.name}}</a>
+    </li> -->
+</ul>
+<div ng-controller="SearchBarCtrl">
+    <form class="navbar-form navbar-right" ui-keypress="{13: 'search()'} ">
+        <div class="input-group form-search">
+            <input ng-model="keyword" type="text" placeholder="Search" class="form-control">
+            <div class="input-group-btn">
+                <button ng-click="search()" class="btn btn-default"><i class="icon ion-android-search"></i></button>
+            </div>
+        </div>
+        <div ng-if="!loggedIn" class="form-group form-sign-in"><a data-toggle="modal" ng-click="showLoginBox()" class="btn btn-default">Log in</a></div>
+        <div ng-if="loggedIn" class="btn-group form-profile">
+            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default dropdown-toggle">
+                <img ng-if="me.avatar" ng-src="{{me.avatar}}"><img ng-if="!me.avatar" ng-src="/app/images/idolo-avatar.png"><span>{{me.name}}</span><span class="caret"></span></button>
+            <div class="dropdown-menu dropdown-profile">
+                <div class="arrow"></div>
+                <div class="dropdown-body">
+                    <ul class="with-border">
+                        <li class="anchor"><a ui-sref="user.activity({userId: me.id })" href="javascript:;"><span class="item-avatar"><img ng-if="!me.avatar" ng-src="/app/images/idolo-avatar.png"><img ng-if="me.avatar" ng-src="{{me.avatar}}"></span><span class="item-info"><span class="item-info-name">{{me.name}}</span><span class="item-info-bcoin">{{me.score | shortNumber}}<i class="ion-ribbon-a"></i></span></span></a></li>
+                        <li><a ui-sref="user.activity({userId: me.id })" href="javascript:;">View your profile</a></li>
+                        <li><a ng-click="logout()" href="javascript:;">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+</div>
+

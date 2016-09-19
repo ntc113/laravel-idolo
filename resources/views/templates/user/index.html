@@ -1,0 +1,89 @@
+<head/><div class="bx-user">
+    <div class="container"><!--user-->
+
+        <div class="user">
+            <div class="user-inner">
+                <div class="header-user">
+                    <div class="avatar-user">
+                        <img ng-if="!user.avatar" ng-src="/app/images/idolo-avatar.png">
+                        <img ng-if="user.avatar" ng-src="{{user.avatar}}">
+                    </div>
+                    <div class="info-user">
+                        <h1>{{user.name}} <span class="beat-coin"><span>{{user.score | shortNumber}} <i class="ion-ribbon-a"></i></span></span></h1>
+                        <!-- <div class="status">I'm using usport.
+                        </div> -->
+                        <div class="extra">
+                            <div class="item-extra">
+                                <i class="icon ion-ios-world-outline"></i>
+                                <a href="javascript:;">/user/{{user.id}}</a>
+                            </div>
+                        </div>
+                        <div class="gender">
+                            <span>Gender:</span> 
+                            <span ng-if="user.gender==1">Male <i class="ion-male"></i></span>
+                            <span ng-if="user.gender==2">Female <i class="ion-female"></i></span>
+                            <span ng-if="user.gender==0">Other <i class="ion-transgender"></i></span>
+                        </div>
+                        <div class="birthday" ng-if="user.birthday">
+                            <span>Birthday:</span> 
+                            <span>{{user.birthday | date:'shortDate'}}</span>
+                        </div>
+                        <div class="phone" ng-if="user.phone_number">
+                            <span>Phone:</span> 
+                            <span>{{user.phone_number}}</span>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="tab-user">
+                    <!-- <div class="action-btn" ng-if="!user.is_me">
+                        <a ng-if="!user.followed" ng-click="follow()" class="btn btn-success btn-lg">
+                            <span>Follow</span>
+                        </a>
+                        <a ng-click="openBoxChat(user.infoUser.userId, 1, user.name, user.id)" href="javascript:;" class="btn btn-success btn-lg btn-icon">
+                            <span class="icon ion-android-chat"></span><span>Tin nhắn</span>
+                        </a>
+                        <a ng-if="user.followed" ng-click="unFollow()" class="btn btn-following btn-lg">
+                            <span class="ac-following">Following</span>
+                            <span class="ac-unfollow">Unfollow</span>
+                        </a>
+                    </div> -->
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="javascript:;"><span>{{user.total_posts}}</span> Posts</a></li>
+                        <!-- <li><a href="javascript:;"><span>{{user.following}}</span>Following</a></li>
+                        <li><a href="javascript:;"><span>{{user.follower}}</span>Followers</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end user-->
+    </div>
+</div>
+<div ng-controller="UserWallCtrl" class="bx-feed bx-feed-detail">
+    <div class="container"><!--feed-->
+        <div class="feed">
+            <div class="feed-inner" infinite-scroll='nextPage()' infinite-scroll-disabled='busy' infinite-scroll-distance='3'>
+                <div masonry item-selector=".feed-item" fitWidth="true" isFitWidth="true">
+                    <!--feed item-->
+                    <div ng-repeat='(pidx, item) in posts' class="feed-item masonry-brick" ng-controller="PostCtrl" ng-init="init(item, pidx)" track-position>
+                        <div ng-include="'/templates/post/article.html'">
+
+                        </div>
+                    </div>
+                    <!--end feed item-->
+                </div>
+
+
+            </div>
+            <!--feed more-->
+            <div class="load-more">
+                <a ng-show="showMore" ng-click="loadNextPage()" class="btn btn-default btn-block btn-lg">
+                    Read more
+                </a>
+            </div>
+            <!--end feed more-->
+        </div>
+        <!--end feed-->
+    </div>
+</div>

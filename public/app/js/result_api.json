@@ -1,0 +1,89 @@
+{
+	"id":"36",
+	"username":"583751191772170",
+	"display_name":"D\u01b0\u01a1ng Xu\u00e2n Qu\u1ef3nh",
+	"avatar":"https:\/\/fbcdn-profile-a.akamaihd.net\/hprofile-ak-xfl1\/v\/t1.0-1\/p160x160\/13241114_652157594931529_6863327438654061426_n.jpg?oh=3bda7d2114992be7f662975e57d37060&oe=57E04002&__gda__=1472639044_e4c68bef10b276043f783370d6078cbf",
+	"bcoin":"13440",
+	"follower":"48",
+	"total_posts":"1076",
+	"total_awards":"0",
+	"infoUser":{"lastVisitDate":"2016-06-01 09:43:41","status":1}
+}
+
+
+{
+	"post_id":57195,
+	"content":"PH\u1eaaN N\u1ed8 TR\u01af\u1edaC C\u1ea2NH B\u00c0 GI\u00daP VI\u1ec6C THAM \u0102N ,TU H\u1ebeT C\u1ea2 B\u00ccNH S\u1eeeA C\u1ee6A B\u00c9 TRONG CH\u1edaP M\u1eaeT \n.\nClip \u0111\u01b0\u1ee3c ng\u01b0\u1eddi ch\u1ee7 nh\u00e0 t\u00ean l\u00e0 \u0110VH chia s\u1ebb ng\u00e0y h\u00f4m qua , quy\u1ebft \u0111\u1ecbnh \u0111\u1ec3 \u0111t v\u00e0o h\u1ed9p...",
+	"attachments":[
+		{
+			"src":"http:\/\/media.beat.vn\/video\/1606\/0a09e527609c0565a6ea822b71495762.mp4",
+			"type":"video",
+			"thumb":{
+				"type":"image",
+				"width":224,
+				"src":"http:\/\/media.beat.vn\/image\/1606\/574f478754897.jpg",
+				"height":400
+			}
+		}],
+	"created":"2016-06-02 03:37:27",
+	"updated":"2016-06-02 03:37:27",
+	"status":1,
+	"viewed":0,
+	"liked":8,
+	"unliked":0,
+	"commented":1,
+	"category_id":28,
+	"user_id":21285,
+	"is_anonymous":0,
+	"shared":0,
+	"is_top":1,
+	"is_ghim":0,
+	"top_like":1,
+	"category_name":"GHIM",
+	"category_slug":"bien",
+	"category_parent_slug":"",
+	"username":1649305298620390,
+	"display_name":"BEATVN",
+	"avatar":"http:\/\/graph.facebook.com\/1649305298620390\/picture?type=square",
+	"fb_id":1649305298620390,
+	"post_url":"http:\/\/beatvn.com\/post\/57195",
+	"total_file":1,
+	"post_type":"videos",
+	"is_liked":0,
+	"is_shared":0
+}
+{
+	"category_id":"32",
+	"name":"18+",
+	"slug":"18",
+	"location":"TOP",
+	"link":"",
+	"order":"6",
+	"status":"1",
+	"viewed":"0",
+	"posted":"0",
+	"parent_id":"0",
+	"parent_slug":"",
+	"state":"1",
+	"icon":"http:\/\/www.beatvn.com\/images\/post\/post-18.png"
+}
+
+
+{
+	"id":"97097",
+	"username":"congnt@catcom.vn",
+	"display_name":"Cong Map",
+	"avatar":"https:\/\/fbcdn-profile-a.akamaihd.net\/hprofile-ak-xtp1\/v\/t1.0-1\/p160x160\/12993594_102225350185138_384918127273381234_n.jpg?oh=c96fc248df108ff6036ca94ae1f1c600&oe=57C374D2&__gda__=1472516307_3ec73d66ed7408aa2abe43ab8f40eef5",
+	"follower":"0",
+	"following":"1",
+	"mood":null,
+	"bcoin":"0",
+	"group_id":"25",
+	"fb_id":null,
+	"total_posts":"1",
+	"total_awards":"0",
+	"is_me":true,
+	"followed":false,
+	"token":"e346f998cf675984f6d1e0ac94a5f8559953c649",
+	"profile_url":"http:\/\/www.beatvn.com\/user\/97097"
+}

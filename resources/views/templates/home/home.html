@@ -1,0 +1,195 @@
+
+<head/><div class="bx-feed" id="feed">
+    <div class="container"><!--feed-->
+        <div class="row">
+            <div class="col-left col-sm-12 col-md-8"><!--feed-->
+                <div class="feed preLoading">
+                    <div class="feed-inner">
+                        <!--feed item-->
+                        <div class="feed-item">
+                            <div class="media">
+                                <div class="thumbnail">
+                                    <div class="timeline-wrapper list-feed">
+                                        <div class="timeline-item">
+                                            <div class="animated-background ">
+                                                <div class="background-masker header-top"></div>
+                                                <div class="background-masker header-left"></div>
+                                                <div class="background-masker header-right"></div>
+                                                <div class="background-masker header-bottom"></div>
+                                                <div class="background-masker subheader-left"></div>
+                                                <div class="background-masker subheader-right"></div>
+                                                <div class="background-masker subheader-bottom"></div>
+                                                <div class="background-masker content-top"></div>
+                                                <div class="background-masker content-first-end"></div>
+                                                <div class="background-masker content-second-line"></div>
+                                                <div class="background-masker content-second-end"></div>
+                                                <div class="background-masker content-third-line"></div>
+                                                <div class="background-masker content-third-end"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end feed item-->
+
+                        <!--feed item-->
+                        <div class="feed-item">
+                            <div class="media">
+                                <div class="thumbnail">
+                                    <div class="timeline-wrapper list-feed">
+                                        <div class="timeline-item">
+                                            <div class="animated-background ">
+                                                <div class="background-masker header-top"></div>
+                                                <div class="background-masker header-left"></div>
+                                                <div class="background-masker header-right"></div>
+                                                <div class="background-masker header-bottom"></div>
+                                                <div class="background-masker subheader-left"></div>
+                                                <div class="background-masker subheader-right"></div>
+                                                <div class="background-masker subheader-bottom"></div>
+                                                <div class="background-masker content-top"></div>
+                                                <div class="background-masker content-first-end"></div>
+                                                <div class="background-masker content-second-line"></div>
+                                                <div class="background-masker content-second-end"></div>
+                                                <div class="background-masker content-third-line"></div>
+                                                <div class="background-masker content-third-end"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end feed item-->
+
+                        <!--feed item-->
+                        <div class="feed-item">
+                            <div class="media">
+                                <div class="thumbnail">
+                                    <div class="timeline-wrapper list-feed">
+                                        <div class="timeline-item">
+                                            <div class="animated-background ">
+                                                <div class="background-masker header-top"></div>
+                                                <div class="background-masker header-left"></div>
+                                                <div class="background-masker header-right"></div>
+                                                <div class="background-masker header-bottom"></div>
+                                                <div class="background-masker subheader-left"></div>
+                                                <div class="background-masker subheader-right"></div>
+                                                <div class="background-masker subheader-bottom"></div>
+                                                <div class="background-masker content-top"></div>
+                                                <div class="background-masker content-first-end"></div>
+                                                <div class="background-masker content-second-line"></div>
+                                                <div class="background-masker content-second-end"></div>
+                                                <div class="background-masker content-third-line"></div>
+                                                <div class="background-masker content-third-end"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end feed item-->
+
+                        <!--feed item-->
+                        <div class="feed-item">
+                            <div class="media">
+                                <div class="thumbnail">
+                                    <div class="timeline-wrapper list-feed">
+                                        <div class="timeline-item">
+                                            <div class="animated-background ">
+                                                <div class="background-masker header-top"></div>
+                                                <div class="background-masker header-left"></div>
+                                                <div class="background-masker header-right"></div>
+                                                <div class="background-masker header-bottom"></div>
+                                                <div class="background-masker subheader-left"></div>
+                                                <div class="background-masker subheader-right"></div>
+                                                <div class="background-masker subheader-bottom"></div>
+                                                <div class="background-masker content-top"></div>
+                                                <div class="background-masker content-first-end"></div>
+                                                <div class="background-masker content-second-line"></div>
+                                                <div class="background-masker content-second-end"></div>
+                                                <div class="background-masker content-third-line"></div>
+                                                <div class="background-masker content-third-end"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end feed item-->
+
+                    </div>
+                </div>
+                <div class="feed" ng-show="preLoading">
+                    <div class="feed-item">
+                        <div class="media">
+                            <div class="thumbnail">
+                                <div class="media-header">
+                                    <a href="javascript:;" ng-click="selectCate()">
+                                        <div class="media-left">
+                                            <img ng-if="!loggedIn" class="media-object" src="/app/images/idolo-avatar.png" alt="">
+                                            <img ng-if="loggedIn" class="media-object" ng-src="{{me.avatar}}" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-noti">What's on your mind?</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-inner" infinite-scroll='nextPage()' infinite-scroll-disabled='busy' infinite-scroll-distance='3'>
+                        <div ng-repeat='(pidx, item) in posts' class="feed-item " ng-controller="PostCtrl" ng-init="init(item, pidx)" track-position>
+                            <div ng-include="'/templates/post/article.html'">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-right col-sm-12 col-md-4"><!--feed-->
+                <div class="right-inner">
+                    <div class="content-sticky">
+                        <!--top-->
+                        <!--app-->
+                        <div class="app-page">
+                            <div class="link-app">
+                                <a href="javascript:alert('comming soon')" target="_blank">
+                                    <img src="/app/images/app-store.png">
+                                </a>
+                                <a href="https://drive.google.com/open?id=0B6rLhL-dt6fxR0F5UkRXRVA0Yjg" target="_blank">
+                                    <img src="/app/images/play-store.png">
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- end app -->
+                        <div class="user user-top" ng-include="'/templates/home/top_users.html'">
+                        
+                        </div>
+                        <!--end top-->
+                        <div ng-include="'/templates/home/featured.html'">
+                            <!--hot-->
+
+                            <!--ebd hot-->
+                        </div>
+                    </div>
+                    <div class="content-right">
+
+                    </div>
+
+
+                </div>
+                <!--end feed-->
+
+            </div>
+        </div>
+
+        <!--end feed-->
+    </div>
+</div>
+<!-- <div ng-if="loggedIn" ng-include="'/templates/chat/sidebar.html'"> -->
+
+</div>

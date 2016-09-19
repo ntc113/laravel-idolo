@@ -1,0 +1,79 @@
+<head/><div class="bx-detail" ng-controller="PostCtrl" ng-init="init(detailPost.data, 0)">
+    <div class="container"><!--feed-->
+        <div class="detail-feed">
+            <div class="detail-inner row">
+                <div class="col-left col-sm-12 col-md-8">
+                    <!--detail item-->
+                    <div class="feed-item">
+                        <div ng-include="'/templates/post/article.html'">
+
+                        </div>
+
+                    </div>
+                    <!--end detail item-->
+                </div>
+                <div class="col-right col-sm-12 col-md-4">
+                    <!--block-->
+                    <div class="block">
+                        <div class="block-body">
+                            <div class="profile-right">
+                                <a href="javascript:;">
+                                    <div class="avatar-user">
+                                        <img ng-if="post.avatar" ng-src="{{post.avatar}}">
+                                        <img ng-if="!post.avatar" ng-src="/app/images/idolo-avatar.png">
+                                    </div>
+                                    <div class="intro-user">
+                                        <div class="name-user">{{post.display_name}}</div>
+                                        <!-- <div class="stats-user">
+                                            <span>1000</span> bạn
+                                            <span class="dot"> · </span>
+                                            <span>100</span> bài viết
+                                        </div> -->
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end block-->
+
+                    <!--block-->
+
+                    <div class="post-hot">
+                        <div class="post-inner">
+                            <div class="heading">
+                                <div class="heading-title pull-left">
+                                    <span>Suggestion</span>
+                                </div>
+                            </div>
+                            <div class="list-post">
+                                <div class="item-post" ng-repeat='post in otherPosts'>
+                                    <div class="item-pic">
+                                        <a href="javascript:;" ui-sref="post({post_id: post.id})" ng-repeat="attachment in post.attachments" ng-if="$index == 0">
+                                            <img ng-if="attachment.type == 'image'" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAABqAQMAAABu71bUAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABVJREFUOMtjYBgFo2AUjIJRMAqIBQAGNgABETDaUwAAAABJRU5ErkJggg==" style="background: url({{attachment.src}}) no-repeat">
+                                            <img ng-if="attachment.type == 'video'" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAABqAQMAAABu71bUAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABVJREFUOMtjYBgFo2AUjIJRMAqIBQAGNgABETDaUwAAAABJRU5ErkJggg==" style="background: url({{attachment.thumb}}) no-repeat">
+                                        </a>
+                                    </div>
+                                    <div class="item-info">
+                                        <a href="javascript:;" ui-sref="post({post_id: post.id})">
+                                            {{post.content|limitTo:100}}
+                                        </a>
+                                    </div>
+                                    <div class="item-user">
+                                        <a href="javascript:;" ui-sref="user.activity({userId: post.user_id})">
+                                            <img class="media-object" ng-if="post.avatar" ng-src="{{post.avatar}}">
+                                            <img class="media-object" ng-if="!post.avatar" ng-src="/app/images/idolo-avatar.png" alt="{{post.display_name}}">
+                                            <span>{{post.display_name}}</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--end block-->
+                </div>
+            </div>
+        </div>
+        <!--end feed-->
+    </div>
+</div>

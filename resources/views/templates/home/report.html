@@ -1,0 +1,50 @@
+<head/><div class="modal-header">
+    <button ng-click="closeModal()" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">
+    If you have any questions, please contact us and we'll get back to you as soon as possible. We look forward to hearing from you.</h4>
+</div>
+<div class="modal-body">
+    <div class="box box-info">
+        <div class="box-header">
+            <i class="ion-email"></i>
+            <h3 class="box-title">Quick Report</h3>
+        </div>
+        <div class="box-body">
+            <form name=contactForm>
+                <div class="form-group">
+                    <span>Name</span>
+                    <input type="text" class="form-control" id="username" name="username" ng-model="contact.username" required>
+                    <span style="color:red" ng-show="contactForm.username.$invalid">
+                        <span ng-show="contactForm.username.$error.required">Name is required.</span>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <span>Email</span>
+                    <input type="email" class="form-control" id="email" name="email" ng-model="contact.email" required>
+                    <span style="color:red" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">
+                        <span ng-show="contactForm.email.$error.required">Email is required.</span>
+                        <span ng-show="contactForm.email.$error.email">Invalid email address.</span>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <span>Subject</span>
+                    <input type="text" class="form-control" id="subject" name="subject" ng-model="contact.subject" required>
+                    <span style="color:red" ng-show="contactForm.subject.$invalid">
+                        <span ng-show="contactForm.subject.$error.required">Subject is required.</span>
+                    </span>
+                </div>
+                <div>
+                    <span>Message</span>
+                    <textarea class="form-control" id="message" cols="20" rows="2" name="message" ng-model="contact.message" required>
+                    <span style="color:red" ng-show="contactForm.message.$invalid">
+                        <span ng-show="contactForm.message.$error.required">Message is required.</span>
+                    </span></textarea>
+                </div>
+                
+            </form>
+        </div>
+        <div class="box-footer clearfix">
+            <button class="pull-right btn btn-primary" id="btn-send" ng-click="sendContact()" ng-disabled="contactForm.$invalid">Send</button>
+        </div>
+    </div>
+</div>
